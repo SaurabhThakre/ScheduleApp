@@ -1,0 +1,61 @@
+<div class="headcolor">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="dark">
+
+        <a class="navbar-brand" href="#">
+          <img src="/assets/calendar.png" width="30" height="30" class="d-inline-block align-top rotate-center" alt="">
+          <span class="color1">Schedule</span><span class="color2">App</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        </div>
+        <a [routerLink]="['/AppointmentSchedule']" routerLinkActive="router-link-active" ><button type="button" class="btn btn-success btn-lg buttonposition">Get Started</button></a>
+      </nav>
+</div>
+
+    <div class="formcolor">
+    <div class="container">
+
+    <form #postForm="ngForm" id="myForm">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <img src="/assets/gmail.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label for="email">Email</label>
+          <input type="email" class="form-control slide-right right" id="x" placeholder="Email" name="email" #emails ngModel required email>
+        </div>
+        <div class="form-group col-md-6">
+            <img src="/assets/key.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label for="password">Password</label>
+          <input type="password" class="form-control slide-left left" id="x" placeholder="Password" name="password" #passwords ngModel required minlength="6">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="onFetchPosts(emails.value, passwords.value)" [disabled]="!postForm.valid">See Your Appointments</button>
+    </form>
+    <br>
+
+        <p *ngIf="loadedPosts.length < 1 && !isFetching && isClicked">No appointments scheduled!</p>
+        <ul class="list-group slide-top" *ngIf="loadedPosts.length >= 1 && !isFetching">
+          <li class="list-group-item" *ngFor="let post of loadedPosts">
+            <div *ngIf="gmail1 == post.email && gpass1 == post.password">
+              <img src="/assets/meeting.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;Dear {{post.user}},<br>
+                <div class="marg">You have {{post.titletext}} appointment scheduled with {{post.client}},<br>
+                On {{post.dateapp}} , {{post.timeapp}} at {{post.place}}.</div>
+            </div>
+            <div *ngIf="gmail1 != post.email || gpass1 != post.password">
+              No appointments scheduled!
+            </div>
+          </li>
+          <br>
+          <button class="btn btn-danger" [disabled]="loadedPosts.length < 1" (click)="onClearPosts()">
+              Delete Appointments
+          </button>
+          <br>
+        </ul>
+        <div *ngIf="isFetching" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+    </div>
+    </div>
+

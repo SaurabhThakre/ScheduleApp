@@ -1,0 +1,69 @@
+<div class="headcolor">
+<app-header></app-header>
+</div>
+<div class="formcolor">
+<div class="container">
+
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value, dated.value, timed.value, num1.value, num2.value, name1.value, name2.value, titled.value, placed.value, name1.value, name2.value)" id="myForm" >
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <img src="/assets/gmail.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Email</label>
+      <input type="email" class="form-control slide-right right" id="x" placeholder="Email" name="email" ngModel required email>
+    </div>
+    <div class="form-group col-md-6">
+        <img src="/assets/key.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Password</label>
+      <input type="password" class="form-control slide-left left" id="x" placeholder="Password" name="password" ngModel required minlength="6">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <img src="/assets/client.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Name</label>
+        <input type="text" class="form-control slide-right right" id="x" placeholder="John Doe" #name1 name="user" ngModel required>
+    </div>
+    <div class="form-group col-md-6">
+        <img src="/assets/phone.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Phone Number</label>
+      <input type="number" class="form-control slide-left left" id="x" placeholder="91xxxxxxxxxx" #num1 name="phone1" minlength="12" ngModel required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <img src="/assets/client.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Client Name</label>
+      <input type="text" class="form-control slide-right right" id="x" placeholder="John Doe" #name2 name="client" ngModel required>
+    </div>
+    <div class="form-group col-md-6">
+        <img src="/assets/phone.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Client Phone Number</label>
+      <input type="number" class="form-control slide-left left" id="x" placeholder="91xxxxxxxxxx" #num2 name="phone2" minlength="12" ngModel required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <img src="/assets/sku.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Appointment Title/Description</label>
+      <input type="text" class="form-control slide-right right" id="x" placeholder="Meeting" #titled name="titletext" ngModel required>
+    </div>
+    <div class="form-group col-md-6">
+        <img src="/assets/location.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Place of Appointment</label>
+      <input type="text" class="form-control slide-left left" id="x" placeholder="" name="place" #placed ngModel required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <img src="/assets/calendar1.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Date of Appointment</label>
+      <input type="date" class="form-control slide-right right" id="x" name="dateapp" #dated ngModel required>
+    </div>
+    <div class="form-group col-md-6">
+        <img src="/assets/clock.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;<label>Time of Appointment</label>
+      <input type="time" class="form-control slide-left left" id="x" name="timeapp" #timed ngModel required>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary alert" (dblclick)="postForm.reset()" [disabled]="!postForm.valid">Set Appointment</button>
+
+</form>
+
+</div>
+</div>
+
