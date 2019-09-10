@@ -1,14 +1,15 @@
 {
   "name": "scheduleapp",
   "version": "0.0.0",
+  "main": "send.js",
   "scripts": {
     "ng": "ng",
-    "start": "node send.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "postinstall": "ng build --prod"
   },
   "engines": {
     "node": "10.16.0",
