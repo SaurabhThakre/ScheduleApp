@@ -1,6 +1,7 @@
 # Scheduleapp
 
 This is an Appointment Scheduling Application.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## How to Run ScheduleApp locally
