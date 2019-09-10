@@ -1,10 +1,9 @@
 {
   "name": "scheduleapp",
   "version": "0.0.0",
-  "main": "send.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node send.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
