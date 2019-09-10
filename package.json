@@ -4,20 +4,22 @@
   "main": "send.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build  --prod"
+    "postinstall": "ng build --aot -prod",
+    "heroku-postbuild": "ng build --prod"
   },
   "engines": {
-    "node": "~10.16.0",
-    "npm": "~6.9.0"
+    "node": "10.16.0",
+    "npm": "6.9.0"
   },
   "private": true,
   "dependencies": {
     "@angular/cli": "^8.3.3",
+    "@angular/compiler": "^8.2.5",
     "@angular/compiler-cli": "~8.2.5",
     "@angular/animations": "^8.2.5",
     "@angular/common": "~8.2.5",
@@ -46,7 +48,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.3",
-    "@angular/compiler": "^8.2.5",
     "@angular/language-service": "~8.2.5",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
