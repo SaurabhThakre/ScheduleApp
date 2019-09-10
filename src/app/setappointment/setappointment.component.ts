@@ -55,11 +55,16 @@ export class SetappointmentComponent implements OnInit {
     console.log(w);
     let change = 1;
 
-    // this.http.get(`http://localhost:3000/sms?no1=${this.Number1}&no2=${this.Number2}&text1=${this.Message1}&text2=${this.Message2}`)
-    // .subscribe(responseData => {
-    //   // ...
-    //   this.isSend = true;
-    // });
+     // tslint:disable-next-line: max-line-length
+    Message1 = 'Dear ' + name1 + ', You have ' + titled + ' appointment scheduled with ' + name2 + ', on ' + dated + ', ' + timed + ' at ' + placed;
+     // tslint:disable-next-line: max-line-length
+    Message2 = 'Dear ' + name2 + ', You have ' + titled + ' appointment scheduled with ' + name1 + ', on ' + dated + ', ' + timed + ' at ' + placed;
+
+    this.http.get(`http://localhost:3000/sms?no1=${num1}&no2=${num2}&text1=${Message1}&text2=${Message2}`)
+    .subscribe(responseData => {
+      // ...
+      this.isSend = true;
+    });
 
 
     // tslint:disable-next-line: only-arrow-functions

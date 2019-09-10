@@ -1,27 +1,35 @@
 # Scheduleapp
 
+This is an Appointment Scheduling Application.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
-## Development server
+## How to Run ScheduleApp locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server.
 
-## Code scaffolding
+Run `node send.js` on another terminal simultaneously.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to `http://localhost:4200/`.
 
-## Build
+## How to use ScheduleApp
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1) Click on Get Started you will then navigate to form page.
 
-## Running unit tests
+2) Fill the form and then click on Set Appointment to set the appointment with the client.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3) You and Client will recieve the SMS immediately after setting the appointment.
 
-## Running end-to-end tests
+4) You will also recieve SMS Reminder 3 Hours prior to the appointment.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+5) You can check all your appointments by clicking on Your Schedule and filling your email & password you used to set your appointment.
 
-## Further help
+6)On clicking Delete Appointments you can delete all appointments.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Note
+
+ScheduleApp uses Plivo SMS Api so only after your number is registered, you will get messages after filling the Form.
+
+Your phone number should start with 91 in the form as per the requirement of Plivo SMS Api.
+(Ex:-91xxxxxxxxxx, xxxxxxxxxx is your 10 digit number)
+
+You can Set appointment and check Your Schedule using this link https://scheduleapp-1567399660241.firebaseapp.com/Home but SMS service does not work if appointment is scheduled from this link.
