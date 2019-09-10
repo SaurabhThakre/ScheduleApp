@@ -23,7 +23,7 @@ Navigate to `http://localhost:4200/`.
 
 5) You can check all your appointments by clicking on Your Schedule and filling your email & password you used to set your appointment.
 
-6)On clicking Delete Appointments you can delete all appointments.
+6) On clicking Delete Appointments you can delete all appointments.
 
 ### Note
 
