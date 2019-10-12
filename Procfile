@@ -1,1 +1,1 @@
-web: node send.js
+web: node server.js
