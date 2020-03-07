@@ -2,7 +2,7 @@
 
 This is an Appointment Scheduling Application.
 
-<iframe src="https://drive.google.com/file/d/10X8UiCmTJqaScoAROqgehrmlJdpWdNS5/preview" width="640" height="480"></iframe>
+<img src="demo.gif" alt="animated" />
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
