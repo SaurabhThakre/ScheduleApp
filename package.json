@@ -33,7 +33,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "net": "^1.0.2",
     "nexmo": "^2.4.2",
     "ngx-toastr": "^10.2.0",
