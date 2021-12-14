@@ -1,0 +1,251 @@
+.buttonposition {
+  position: fixed;
+  left: 44.1%;
+  box-shadow: 4px 4px 10px black;
+  font-size: 25px;
+}
+.imageposition {
+  width: 150px;
+  height: 150px;
+}
+.color1 {
+  color: tomato;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 1.953vw;
+  text-shadow: 4px 4px 4px black;
+}
+.color2 {
+  color: #75E52A;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 1.953vw;
+  text-shadow: 4px 4px 4px black;
+}
+.quote{
+  text-align: center;
+  margin-left:120px;
+  margin-right:130px;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.quote1{
+  font-size: 4.167vw;
+  color: white;
+  text-shadow: 4px 4px 10px black;
+  font-weight: bold;
+  font-family: arial;
+  line-height: 4.557vw;
+}
+.quote2{
+  font-size: 1.953vw;
+  text-shadow: 4px 4px 4px black;
+  color: white;
+  font-weight: bold;
+  font-family: arial;
+  line-height: 40px;
+}
+.backGround {
+  background-image:linear-gradient( rgba(0,0,0,.4),rgba(0,0,0,.4) ), url("/assets/back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonposition {
+    position: relative;
+    bottom: -80px;
+    left: 28%;
+    box-shadow: 4px 4px 10px black;
+    font-size: 25px;
+  }
+  .imageposition {
+    width: 150px;
+    height: 150px;
+  }
+  .color1 {
+    color: tomato;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 18px;
+    text-shadow: 4px 4px 4px black;
+  }
+  .color2 {
+    color: #75E52A;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 18px;
+    text-shadow: 4px 4px 4px black;
+  }
+  .quote{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .quote1{
+    font-size: 26px;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+    font-weight: bold;
+    font-family: arial;
+    line-height: 50px;
+  }
+  .quote2{
+    font-size: 16px;
+    text-shadow: 4px 4px 4px black;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+    line-height: 40px;
+  }
+  .backGround {
+    background-image:linear-gradient( rgba(0,0,0,.4),rgba(0,0,0,.4) ), url("/assets/back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover contain;
+    overflow: auto;
+    min-height: 100%;
+    max-height: 1000%;
+  }
+
+}
+
+.rotate-center {
+	-webkit-animation: rotate-center 2s ease-in-out both;
+	        animation: rotate-center 2s ease-in-out both;
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bounce-top {
+	-webkit-animation: bounce-top 0.9s both;
+	        animation: bounce-top 0.9s both;
+}
+
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}

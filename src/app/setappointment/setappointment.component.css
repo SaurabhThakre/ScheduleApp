@@ -1,0 +1,132 @@
+#x {
+  border: 2px solid white;
+  background-color: #bb86fc;
+  box-shadow: 2px 2px 4px black;
+}
+.right {
+  position: relative;
+  left:-500px;
+}
+.left {
+  position: relative;
+  right:-500px;
+}
+.headcolor {
+  /* background-image:linear-gradient( rgba(46, 51, 54, 1),rgba(46, 51, 54, 1) ); */
+  background-color: #121212;
+}
+.formcolor {
+  padding-top: 60px;
+  min-height: 90%;
+  max-height: 1000%;
+  overflow: auto;
+  color: white;
+  font-size: 120%;
+  background-image:linear-gradient( rgba(46, 51, 54, 1),rgba(46, 51, 54, 1) );
+}
+.headerbutton {
+  display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+{
+  -webkit-text-fill-color: black;
+  box-shadow: 0 0 0px 1000px #bb86fc inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type="text"] {
+    font-size:18px;
+    color: black;
+    /* font-weight: bold; */
+}
+input[type="email"] {
+  font-size:18px;
+  color: black;
+  /* font-weight: bold; */
+}
+input[type="password"] {
+  font-size:18px;
+  color: black;
+  /* font-weight: bold; */
+}
+input[type="time"] {
+  font-size:18px;
+  color: black;
+  /* font-weight: bold; */
+}
+input[type="date"] {
+  font-size:18px;
+  color: black;
+  /* font-weight: bold; */
+}
+input[type="number"] {
+  font-size:18px;
+  color: black;
+  /* font-weight: bold; */
+}
+.slide-right {
+	-webkit-animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+}
+
+.slide-left {
+	-webkit-animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .formcolor {
+    padding-top: 60px;
+    min-height: 100%;
+    max-height: 1000%;
+    overflow: auto;
+    color: white;
+    font-size: 120%;
+    background-image:linear-gradient( rgba(46, 51, 54, 1),rgba(46, 51, 54, 1) );
+    background-size: cover contain;
+  }
+}

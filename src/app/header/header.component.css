@@ -1,0 +1,50 @@
+.color1 {
+  color: tomato;
+  font-weight: bold;
+  font-family: arial;
+  text-shadow: 4px 4px 4px black;
+  padding-left: 15px;
+}
+.color2 {
+  color: #75E52A;
+  font-weight: bold;
+  font-family: arial;
+  text-shadow: 4px 4px 4px black;
+}
+.mainmenu {
+  /* padding-top: 40px; */
+  padding-right: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 4px 4px 4px black;
+}
+.buttonposition {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.rotate-center {
+	-webkit-animation: rotate-center 2s ease-in-out both infinite;
+	        animation: rotate-center 2s ease-in-out both infinite;
+}
+
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
